@@ -26,6 +26,14 @@ buildscript {
 plugins {
 //    id 'com.github.spotbugs' version '1.6.2'
     id "com.github.ben-manes.versions" version '0.20.0'
+    id "org.sonarqube" version "3.4.0.2513"
+}
+sonarqube {
+  properties {
+    property "sonar.projectKey", "self-service-operations"
+    property "sonar.organization", "self-service-operations"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
 }
 apply plugin: 'groovy'
 apply plugin: 'idea'
